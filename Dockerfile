@@ -23,5 +23,5 @@ RUN mv /usr/local/nginx/conf/nginx.conf /usr/local/nginx/conf/nginx.conf.bak
 
 WORKDIR /rertmp
 
-CMD ln -s ./nginx.conf /usr/local/nginx/conf/nginx.conf \
+CMD cp -f ./nginx.conf /usr/local/nginx/conf/nginx.conf \
   && /usr/local/nginx/sbin/nginx -g 'daemon off;'
