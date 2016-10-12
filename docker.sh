@@ -13,7 +13,7 @@ main()
       docker build -t "${IMAGE_NAME}" -f ./Dockerfile .
       ;;
     "run")
-      docker run -d --name "${CONTAINER_NAME}" -v `pwd`:${WORK_DIR} -p 1936:1935 "${IMAGE_NAME}"
+      docker run -d --name "${CONTAINER_NAME}" -v `pwd`:${WORK_DIR} -p 1935:1935 "${IMAGE_NAME}"
       ;;
     "stop")
       docker stop "${CONTAINER_NAME}"
